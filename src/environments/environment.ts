@@ -4,5 +4,9 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  // Here's our Spotify API token you can use for testing. Acquiring one of these tokens
+  // is beyond the scope of this book. See spotify's developer docs for detail
+  spotifyApiKey: 'b6c5a869f338412a8048d7f57d728df5'
 };
