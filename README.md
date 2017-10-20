@@ -1,5 +1,13 @@
 # SpotifySearch
 
+
+## How to set up spotify auth for API key
+https://developer.spotify.com/web-api/authorization-guide/
+
+## Spotify account
+https://developer.spotify.com/my-applications/#!/applications/629b4075479c4a5081ef4e30c991e921
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.
 
 ## Development server
