@@ -8,6 +8,7 @@ import { environment } from '../environments/environment';
 export class SpotifyService {
 
   static BASE_URL = 'https://api.spotify.com/v1';
+  static token = 'BQDFdD99h2idONwJ4WFhvkiDj4-RcCa459ssGumerbPMYWMUf8g-2Zi2qAwTTp3BjKC5dDStA-PmnJR5_EswbBPj6G4IdstNLuzEd_zJ-7yQREl9P9POGiDVacgincTR2Ty4Ok5mEzdMbG01';
 
   constructor(public http: Http) {}
 
@@ -17,7 +18,8 @@ export class SpotifyService {
       queryUrl = `${queryUrl}?${params.join('&')}`;
     }
 
-    const apiKey = environment.spotifyApiKey;
+    // const apiKey = environment.spotifyApiKey;
+    const apiKey = SpotifyService.token;
     const headers = new Headers({
       'Authorization': `Bearer ${apiKey}`
     });
@@ -49,20 +51,6 @@ export class SpotifyService {
     return this.query(`/albums/${id}`);
   }
 
-  register(): Observable<any[]> {
-    const clientId = '629b4075479c4a5081ef4e30c991e921';
-    const url = 'https://accounts.spotify.com/authorize';
-    const params = [
-      `client_id=${clientId}`,
-      `response_type=code`,
-      `redirect_uri=http://localhost:4200/`
-      // `scope=user-read-private%20user-read-email`,
-      // `state=34fFs29kd09`
-    ];
-
-    const queryUrl = `${url}?${params.join('&')}`;
-    return this.http.request(queryUrl).map((res: any) => res.json());
-  }
 
 
 

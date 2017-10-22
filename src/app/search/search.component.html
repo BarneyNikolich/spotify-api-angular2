@@ -28,6 +28,7 @@
               </h3>
               <br>
               <p>
+                <app-track [id2]="t.id" ></app-track>
                 <a [routerLink]="['/tracks', t.id]">
                   {{ t.name }}
                 </a>

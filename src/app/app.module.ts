@@ -20,6 +20,8 @@ import { SpotifyService } from './spotify.service';
 import { TrackComponent } from './track/track.component';
 import { AlbumComponent } from './album/album.component';
 import { ArtistComponent } from './artist/artist.component';
+import {LoginComponent} from './login/login.component';
+import {CallbackComponent} from './login/callback.component';
 
 
 const routes: Routes = [
@@ -28,6 +30,8 @@ const routes: Routes = [
   { path: 'artists/:id', component: ArtistComponent },
   { path: 'tracks/:id', component: TrackComponent },
   { path: 'albums/:id', component: AlbumComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'callback', component: CallbackComponent },
 ];
 
 @NgModule({
@@ -36,7 +40,9 @@ const routes: Routes = [
     SearchComponent,
     TrackComponent,
     AlbumComponent,
-    ArtistComponent
+    ArtistComponent,
+    LoginComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
